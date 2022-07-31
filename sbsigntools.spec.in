@@ -20,6 +20,10 @@ Patch2:        https://git.kernel.org/pub/scm/linux/kernel/git/jejb/sbsigntools.
 # https://groups.io/g/sbsigntools/message/54
 Patch3:        %{name}-openssl3.patch
 # same as gnu-efi
+
+# support --hash-only option from https://github.com/osresearch/sbsigntools/
+Patch4:        sbsign-add-hash-only-option.patch
+
 ExclusiveArch: x86_64 aarch64 %{arm} %{ix86}
 BuildRequires: make
 BuildRequires: automake
