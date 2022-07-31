@@ -1,0 +1,6 @@
+host:
+  rpm:
+    build:
+    - sbsigntools.spec
+source:
+  create-archive: false
