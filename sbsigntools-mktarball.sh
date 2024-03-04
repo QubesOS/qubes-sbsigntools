@@ -12,13 +12,12 @@ tmp=$(mktemp -d)
 
 unset CDPATH
 pwd=$(pwd)
-version=0.9.4
-commit=d52f7bbb73401aab8a1d59e8d0d686ad9641035e
+version=$(cat version)
 
 pushd "$tmp"
 git clone git://git.kernel.org/pub/scm/linux/kernel/git/jejb/sbsigntools.git
 cd sbsigntools
-git checkout ${commit}
+git checkout v${version}
 ccan_modules="talloc read_write_all build_assert array_size endian"
 git submodule init
 git submodule update
